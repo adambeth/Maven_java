@@ -1,26 +1,24 @@
 package com.array;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class refTypeChallenge {
 
 
-
-    public  void main(String[] args) {
-
-        readIntegers(5);
-
-    }
-
-    public int[] readIntegers(int count){
+    public Integer[] readIntegers(int count){
         System.out.println("Please enter " + count + " numbers:");
         Scanner s = new Scanner(System.in);
-        int[] array = new int[count];
+        Integer[] array = new Integer[count];
         for (int i = 0; i < count;  i++){
             array[i] = s.nextInt();
+            s.nextLine();
 
         }
-        System.out.println(array);
+        System.out.println(Arrays.toString(array));
+        int[] x =new int[count];
+        Arrays.sort(array);
+
         return array;
     }
 
